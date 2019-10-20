@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() 
+{
+	setlocale(0, "");
+	int N,A,D,i,X;
+	cout << "Введите количество элементов массива: "<<endl;
+	cin >> N;
+	cout << "Введите первый элемент массива: " << endl;
+	cin >> A;
+	cout << "Введите знаменатель геометрической прогрессии: ";
+	cin >> D;
+	X = D;
+		if (N > 1)
+		{
+			int* array =  new int [N];
+			array[0] = A;
+			for ( i = 1; i < N; i++)
+			{
+				array[i]= A*X;
+				X *= D;
+			}
+			cout << "Массив : " << endl;
+			for (int i = 0; i < N; i++)
+			{
+				cout << array[i] << ends;
+			}
+		}
+		else
+		{
+			cout << "Введены неверные данные!" << endl;
+		}
+}
